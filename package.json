@@ -1,7 +1,7 @@
 {
   "name": "build-oasis",
   "main": "./lib/main",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Compile OCaml projects with Oasis",
   "keywords": [
     "ocaml",
