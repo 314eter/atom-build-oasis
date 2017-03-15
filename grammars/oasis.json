@@ -1,0 +1,65 @@
+{
+  "name": "Oasis",
+  "scopeName": "source.oasis",
+  "fileTypes": ["_oasis"],
+  "patterns": [
+    {
+      "match": "#.*$",
+      "name": "comment.line.number-sign.oasis"
+    }, {
+      "match": "^\\s*([A-Za-z_][A-Za-z0-9_']*)\\s*(\\$?:)",
+      "captures": {
+        "1": {
+          "name": "entity.other.attribute-name.fieldname.oasis"
+        },
+        "2": {
+          "name": "punctuation.definition.identity.oasis"
+        }
+      }
+    }, {
+      "match": "^([A-Z][A-Za-z0-9_']*)\\s+(?:(\")([^\"]*)(\")|([A-Za-z_][A-Za-z0-9_']*))",
+      "captures": {
+        "1": {
+          "name": "storage.type.section.oasis"
+        },
+        "2": {
+          "name": "punctuation.definition.string.begin.oasis"
+        },
+        "3": {
+          "name": "string.quoted.double.section.oasis"
+        },
+        "4": {
+          "name": "punctuation.definition.string.end.oasis"
+        },
+        "5": {
+          "name": "entity.name.section.oasis"
+        }
+      }
+    }, {
+      "begin": "\\b(if)\\s+([A-Za-z_][A-Za-z0-9_']*)(\\()[^)]*(\\))",
+      "end": "\\b(else)\\b",
+      "beginCaptures": {
+        "1": {
+          "name": "keyword.control.oasis"
+        },
+        "2": {
+          "name": "support.function.test.oasis"
+        },
+        "3": {
+          "name": "punctuation.definition.parameters.oasis"
+        },
+        "4": {
+          "name": "punctuation.definition.parameters.oasis"
+        }
+      },
+      "endCaptures": {
+        "1": {
+          "name": "keyword.control.oasis"
+        }
+      },
+      "patterns": [{
+        "include": "$self"
+      }]
+    }
+  ]
+}

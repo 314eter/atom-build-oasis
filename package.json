@@ -1,0 +1,47 @@
+{
+  "name": "build-oasis",
+  "main": "./lib/main",
+  "version": "0.0.0",
+  "description": "Compile OCaml projects with Oasis",
+  "keywords": [
+    "ocaml",
+    "oasis",
+    "build",
+    "linter"
+  ],
+  "repository": "https://github.com/314eter/atom-build-oasis",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "providedServices": {
+    "builder": {
+      "description": "Runs Oasis",
+      "versions": {
+        "2.0.0": "provideBuilder"
+      }
+    }
+  },
+  "configSchema": {
+    "ocamlPath": {
+      "title": "Path to ocaml",
+      "type": "string",
+      "default": "ocaml",
+      "order": 1
+    },
+    "oasisPath": {
+      "title": "Path to oasis",
+      "type": "string",
+      "default": "oasis",
+      "order": 2
+    }
+  },
+  "devDependencies": {
+    "standard": "*"
+  },
+  "standard": {
+    "globals": [
+      "atom"
+    ]
+  }
+}
