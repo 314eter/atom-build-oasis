@@ -9,7 +9,7 @@
     "build",
     "linter"
   ],
-  "repository": "https://github.com/314eter/atom-build-oasis",
+  "repository": "https://github.com/atom-ocaml/build-oasis",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
